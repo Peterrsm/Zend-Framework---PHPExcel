@@ -1,0 +1,22 @@
+
+<h1>Selecionar Planilhas</h1>
+
+<br>
+
+<div class="row">
+    <div class="col-6">
+        <form method="post" action="/comparativo/opcoes" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="primeiroxls">XLS Planilha 1</label>
+                <input type="file" accept=".xls, .xlsx" class="form-control" id="primeiroxls" name="primeiroxls" required>
+            </div>
+
+            <div class="form-group">
+                <label for="segundoxls">XLS Planilha 2</label>
+                <input type="file" accept=".xls, .xlsx" class="form-control" id="segundoxls" name="segundoxls" required>
+            </div>
+
+            <button type="submit" class="btn">Selecionar Tabs</button>
+        </form>
+    </div>
+</div>

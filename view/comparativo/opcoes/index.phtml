@@ -1,0 +1,50 @@
+
+<h1>Selecionar Tabs</h1>
+
+<br>
+
+<div class="row">
+    <div class="col-6">
+    <form method="post" action="/comparativo/coluna" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="primeiratab">XLS Planilha 1: <?=$nomeprimeiroxls?></label>
+            <br>
+            <select name="primeiratab" id="primeiratab">
+                <?php
+                    foreach($nomes_abas_1 as $value){
+                ?>
+                <option value="<?=$value?>"><?=$value?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="segundatab">XLS Planilha 2: <?=$nomesegundoxls?></label>
+            <br>
+            <select name="segundatab" id="segundatab">
+                <?php
+                    foreach($nomes_abas_2 as $value){
+                ?>
+                <option value="<?=$value?>"><?=$value?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+
+        <input type='hidden' id="primeiroxls" name="primeiroxls" value='<?=$primeiroxls?>'>
+        <input type='hidden' id="segundoxls" name="segundoxls" value='<?=$segundoxls?>'>
+        <input type='hidden' id="nomeprimeiroxls" name="nomeprimeiroxls" value='<?=$nomeprimeiroxls?>'>
+        <input type='hidden' id="nomesegundoxls" name="nomesegundoxls" value='<?=$nomesegundoxls?>'>
+        <input type='hidden' id="nomes_abas_1" name="nomes_abas_1" value='<?=$nomes_abas_1?>'>
+        <input type='hidden' id="nomes_abas_2" name="nomes_abas_2" value='<?=$nomes_abas_2?>'>
+        <input type='hidden' id="destino" name="destino" value='<?=$destino?>'>
+
+        <button type="submit" class="btn">Selecionar Colunas</button>
+    </form>
+    </div>
+</div>

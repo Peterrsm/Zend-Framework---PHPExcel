@@ -1,0 +1,42 @@
+<h1>Comparativo</h1>
+<div class="col-6 float-left">
+    <br>
+    <h2>Planilha 1 x Planilha 2</h2>
+    <h4>Ausente(s) na Planilha 2</h4>
+    <table>
+        <?php
+        $cont = 1;
+        foreach($comparativo_1 as $value){
+        ?>
+            <tr>
+                <td style="border-bottom:1px solid black;">
+                    <?=$cont?>. <?=$value?>
+                </td>
+            </tr>
+        <?php
+            $cont++;
+        }
+        ?>
+
+    </table>
+</div>
+<div class="col-6 float-left">
+    <br>
+    <h2>Planilha 2 x Planilha 1</h2>
+    <h4>Ausente(s) na Planilha 1</h4>
+    <table style="border-bottom:1px solid black;">
+        <?php
+        $cont = 1;
+        foreach($comparativo_2 as $value){
+        ?>
+            <tr>
+                <td style="border-bottom:1px solid black;">
+                    <?=$cont?>. <?=$value?>
+                </td>
+            </tr>
+        <?php
+            $cont++;
+        }
+        ?>
+        </table>
+    </div>

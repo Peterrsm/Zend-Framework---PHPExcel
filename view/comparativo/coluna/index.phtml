@@ -1,0 +1,51 @@
+<h1>Comparativo</h1>
+
+<br>
+
+<div class="row">
+    <div class="col-6">
+    <form method="post" action="/comparativo/comparativo" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="colunaplan1">XLS Planilha 1: <?=$nomeprimeiroxls?></label>
+            <br>
+            <select name="colunaplan1" id="colunaplan1">
+                <?php
+                    foreach($colunas_planilha_plan1 as $value){
+                ?>
+                <option value="<?=$value?>"><?=$value?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+
+        <input type='hidden' id="primeiroxls" name="primeiroxls" value='<?=$primeiroxls?>'>
+        <input type='hidden' id="segundoxls" name="segundoxls" value='<?=$segundoxls?>'>
+        <input type='hidden' id="nomeprimeiroxls" name="nomeprimeiroxls" value='<?=$nomeprimeiroxls?>'>
+        <input type='hidden' id="nomesegundoxls" name="nomesegundoxls" value='<?=$nomesegundoxls?>'>
+        <input type='hidden' id="nomes_abas_1" name="nomes_abas_1" value='<?=$nomes_abas_1?>'>
+        <input type='hidden' id="nomes_abas_2" name="nomes_abas_2" value='<?=$nomes_abas_2?>'>
+        <input type='hidden' id="destino" name="destino" value='<?=$destino?>'>
+        <input type='hidden' id="primeiratab" name="primeiratab" value="<?=$primeiratab?>">
+        <input type='hidden' id="segundatab" name="segundatab" value="<?=$segundatab?>">
+
+        <br>
+
+        <div class="form-group">
+            <label for="colunaplan2">XLS Planilha 2: <?=$nomesegundoxls?></label>
+            <br>
+            <select name="colunaplan2" id="colunaplan2">
+                <?php
+                    foreach($colunas_planilha_plan2 as $value){
+                ?>
+                <option value="<?=$value?>"><?=$value?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Comparar</button>
+    </form>
+    </div>
+</div>
