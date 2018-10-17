@@ -12,7 +12,7 @@ Este é um módulo desenvolvido em PHP integrando Zend Framework com a bibliotec
 
 # Como utilizar
 
-Basta colocar todos os arquivos dentro de um módulo, dentro da pasta "module".
+Basta colocar todos os arquivos dentro de um módulo, nomeado "Comparativo", dentro da pasta "module".
 
 
 # Linguagem
